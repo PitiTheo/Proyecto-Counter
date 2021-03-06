@@ -25,3 +25,5 @@ setInterval(function() {
 	);
 	counter += 1;
 }, 1000);
+
+// en el index solo puedo pasar un solo componente ReactDOM.render

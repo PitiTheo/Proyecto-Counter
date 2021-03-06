@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Footer } from "./footer.js";
 
 export const Counter = props => {
 	let unit = props.seconds;
@@ -28,17 +29,22 @@ export const Counter = props => {
 			}
 		}
 	}
+
 	return (
-		<div className="app d-flex justify-content-center">
-			<div className="icon box">
-				<i className="far fa-clock"></i>
+		<div>
+			<div className="app d-flex justify-content-center">
+				<div className="icon box">
+					<i className="far fa-clock"></i>
+				</div>
+				<div className="counter box">{hunThousand}</div>
+				<div className="counter box">{tenThousand}</div>
+				<div className="counter box">{thousand}</div>
+				<div className="counter box">{hundred}</div>
+				<div className="counter box">{ten}</div>
+				<div className="counter box">{unit}</div>
 			</div>
-			<div className="counter box">{hunThousand}</div>
-			<div className="counter box">{tenThousand}</div>
-			<div className="counter box">{thousand}</div>
-			<div className="counter box">{hundred}</div>
-			<div className="counter box">{ten}</div>
-			<div className="counter box">{unit}</div>
+
+			<Footer />
 		</div>
 	);
 };
